@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cidades - Local Shopping</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <div class="navbar">
+      <div class="logo">🛍️ Local Shopping</div>
+      <div class="nav-links">
+        <span id="user-name-display"></span>
+        <button id="logout-btn" class="nav-btn logout-btn">Sair</button>
+      </div>
+    </div>
+
+    <div id="cities-view" class="page">
+      <h2>🌆 Escolha uma cidade</h2>
+      <div id="city-list" class="city-grid"></div>
+    </div>
+
+    <div id="city-detail-view" class="page" style="display: none;">
+      <button id="back-to-cities" class="back-btn">← Voltar para cidades</button>
+      <div id="selected-city-name" class="selected-city-title"></div>
+
+      <div class="filters-container">
+        <h3>🔍 Filtros</h3>
+        <div class="filter-group">
+          <input type="text" id="filter-lojas" placeholder="Filtrar lojas por nome...">
+          <input type="text" id="filter-comunidades" placeholder="Filtrar comunidades...">
+          <input type="text" id="filter-produtos" placeholder="Filtrar produtos por nome...">
+        </div>
+      </div>
+
+      <div class="section-title">🏪 Lojas e produtos</div>
+      <div id="stores-container" class="stores-container"></div>
+
+      <div id="loja-form-area" style="display: none; margin-top: 2rem; padding: 1rem; background: #f1f5f9; border-radius: 1rem;">
+        <h3>➕ Adicionar novo produto à sua loja</h3>
+        <div class="form-group">
+          <input type="text" id="new-prod-nome" placeholder="Nome do produto">
+        </div>
+        <div class="form-group">
+          <input type="number" id="new-prod-preco" placeholder="Preço (R$)">
+        </div>
+        <button id="add-prod-btn" class="btn btn-primary">Cadastrar Produto</button>
+        <div id="add-prod-msg" class="success-msg"></div>
+      </div>
+
+      <div class="section-title">🤝 Comunidades</div>
+      <div id="communities-container" class="communities-container"></div>
+    </div>
+
+    <footer>Local Shopping © 2025</footer>
+  </div>
+
+  <script src="js/shared/storage.js"></script>
+  <script src="js/shared/auth.js"></script>
+  <script src="js/pages/cidades.js"></script>
+</body>
+</html>
