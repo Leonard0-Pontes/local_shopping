@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro - Local Shopping</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <div class="navbar">
+      <div class="logo">🛍️ Local Shopping</div>
+      <div class="nav-links">
+        <a href="index.html" class="nav-btn">Home</a>
+        <a href="login.html" class="nav-btn">Login</a>
+      </div>
+    </div>
+    <div class="page">
+      <div class="form-card">
+        <h2>Cadastro</h2>
+        <div class="form-group">
+          <label>Nome</label>
+          <input type="text" id="reg-name" placeholder="Seu nome">
+        </div>
+        <div class="form-group">
+          <label>E-mail</label>
+          <input type="email" id="reg-email" placeholder="exemplo@email.com">
+        </div>
+        <div class="form-group">
+          <label>Senha</label>
+          <input type="password" id="reg-password" placeholder="********">
+        </div>
+        <div class="form-group">
+          <label>Tipo de conta</label>
+          <select id="reg-tipo">
+            <option value="cliente">Cliente</option>
+            <option value="lojista">Lojista</option>
+          </select>
+        </div>
+        <div id="loja-select-group" class="form-group" style="display: none;">
+          <label>Selecione sua loja</label>
+          <select id="reg-loja-id"></select>
+        </div>
+        <button id="do-register" class="btn btn-primary">Criar conta</button>
+        <div id="reg-error" class="error-msg"></div>
+        <p style="margin-top: 1rem; text-align: center;">Já tem conta? <a href="login.html">Faça login</a></p>
+      </div>
+    </div>
+    <footer>Local Shopping © 2025</footer>
+  </div>
+
+  <script src="js/shared/storage.js"></script>
+  <script src="js/shared/auth.js"></script>
+  <script src="js/pages/cadastro.js"></script>
+</body>
+</html>
